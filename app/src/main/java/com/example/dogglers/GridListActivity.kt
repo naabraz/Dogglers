@@ -20,6 +20,7 @@ import android.os.Bundle
 import com.example.dogglers.adapter.DogCardAdapter
 import com.example.dogglers.const.Layout
 import com.example.dogglers.databinding.ActivityGridListBinding
+import com.example.dogglers.data.DataSource
 
 class GridListActivity : AppCompatActivity() {
 
@@ -30,9 +31,12 @@ class GridListActivity : AppCompatActivity() {
         binding = ActivityGridListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val dogDataset = DataSource.dogs
+
         binding.gridRecyclerView.adapter = DogCardAdapter(
             applicationContext,
-            Layout.GRID
+            Layout.GRID,
+            dogDataset
         )
 
         // Specify fixed size to improve performance

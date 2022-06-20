@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dogglers.adapter.DogCardAdapter
 import com.example.dogglers.const.Layout
+import com.example.dogglers.data.DataSource
 import com.example.dogglers.databinding.ActivityVerticalListBinding
 
 class VerticalListActivity : AppCompatActivity() {
@@ -30,9 +31,12 @@ class VerticalListActivity : AppCompatActivity() {
         binding = ActivityVerticalListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val dogDataset = DataSource.dogs
+
         binding.verticalRecyclerView.adapter = DogCardAdapter(
             applicationContext,
-            Layout.VERTICAL
+            Layout.VERTICAL,
+            dogDataset
         )
 
         // Specify fixed size to improve performance
