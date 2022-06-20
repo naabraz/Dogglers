@@ -21,7 +21,7 @@
             android:importantForAccessibility="no"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/dog_name"
-            app:layout_constraintBottom_toBottomOf="@id/dog_name"/>
+            app:layout_constraintBottom_toBottomOf="@id/dog_name" />
 
         <TextView
             android:id="@+id/dog_name"
