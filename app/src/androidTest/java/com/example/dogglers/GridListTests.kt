@@ -44,7 +44,7 @@ class GridListTests : BaseTest() {
 
     @Test
     fun `grid_list_content_on_first_page`() {
-        onView(withText("Nox")).check(matches(isDisplayed()))
+        onView(withText("Tzeitel")).check(matches(isDisplayed()))
     }
 
     @Test
